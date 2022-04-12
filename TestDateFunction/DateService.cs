@@ -38,13 +38,7 @@ namespace TestDateFunction
         }
 
         //получить разницу дней
-        private int GetDays(DateTime startDate, DateTime endDate)
-        {
-            var result = 0;
-            var dates = DateToSortOrder(startDate, endDate);
-            result = Math.Abs(dates.Item2.Day - dates.Item1.Day);
-            return result;
-        }
+        private int GetDays(DateTime startDate, DateTime endDate)=> Math.Abs(endDate.Day - startDate.Day);
 
         //упорядочить даты
         private (DateTime, DateTime) DateToSortOrder(DateTime startDate, DateTime endDate)
